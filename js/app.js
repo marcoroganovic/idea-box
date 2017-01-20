@@ -109,19 +109,25 @@ var IdeaBox = (function() {
     saveAndDisplay(DATA);
   }
 
+  function changeVote(upDown, idea) {
+    switch(idea.quality) {
+      case "swill":
+        idea.quality = upDown ? "plausible" : "swill";
+        break;
+      case "plausible":
+        idea.quality = upDown ? "genius" : "swill";
+        break;
+      case "genius": 
+        idea.quality = upDown ? "genius" : "plausible";
+        break;
+    }
+  }
+
+
   function upvoteIdea(id) {
     DATA = DATA.filter(function(idea) {
       if(idea.id === id) {
-        switch (idea.quality) {
-          case "swill":
-            idea.quality = "plausible";
-            break;
-          case "plausible":
-            idea.quality = "genius";
-            break;
-          default:
-            idea.quality = "genius";
-        }
+        changeVote(true, idea);
       }
       return idea;
     });
@@ -132,16 +138,7 @@ var IdeaBox = (function() {
   function downvoteIdea(id) {
     DATA = DATA.filter(function(idea) {
       if(idea.id === id) {
-        switch (idea.quality) {
-          case "plausible":
-            idea.quality = "swill";
-            break;
-          case "genius":
-            idea.quality = "plausible";
-            break;
-          default:
-            idea.quality = "swill";
-        }
+       changeVote(false, idea); 
       }
 
       return idea;
