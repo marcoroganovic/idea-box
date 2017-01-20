@@ -1,0 +1,169 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 16px/150% "Open Sans", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  min-height: 100px;
+  padding: 20px;
+  background: #e5f3f2;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 20px;
+  color: #6d6e71;
+}
+
+.logo span {
+  color: #00a79d;
+}
+
+.header-form input,
+.header-form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.header-form input:focus,
+.header-form textarea:focus {
+  outline: none;
+}
+
+
+.form-button {
+  outline: 0;
+  border: none;
+  background: #00a79d;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form-button:hover {
+  transition: background .5s linear;
+  background: #045e55;
+  cursor: pointer;
+}
+
+.ideas-container {
+  padding: 20px;
+}
+
+.idea {
+  padding: 10px 0;
+  color: #939598;
+  border-bottom: solid 1px #d1d3d4;
+}
+
+.idea:last-child {
+  border-bottom: none;
+}
+
+.idea-header {
+  overflow: hidden;
+  clear: both;
+}
+
+.idea-header h2 {
+  font-family: "Roboto Slab";
+  color: #6d6e71;
+  float: left;
+}
+
+.idea-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.idea-header > .idea-btn {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-top: 21px;
+}
+
+.remove {
+  background: url("../images/delete.svg");
+}
+
+.remove:hover {
+  background: url("../images/delete-hover.svg");
+}
+
+
+.idea-buttons {
+  margin-top: 10px;
+}
+
+.idea-buttons a {
+  display: block;
+  float: left;
+  margin-top: 4px;
+  margin-right: 5px;
+}
+
+.idea-buttons a:last-child {
+  margin-right: 15px;
+}
+
+.idea-buttons small {
+  font-family: "Roboto Slab";
+}
+
+.upvote {
+  background: url("../images/upvote.svg");
+}
+
+.upvote:hover {
+  background: url("../images/upvote-hover.svg");
+}
+
+.downvote {
+  background: url("../images/downvote.svg");
+}
+
+.downvote:hover {
+  background: url("../images/downvote-hover.svg");
+}
+
+.remove:hover,
+.upvote:hover,
+.downvote:hover {
+  transition: background .5s linear;
+}
+
+.no-ideas {
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  color: #fff;
+}
