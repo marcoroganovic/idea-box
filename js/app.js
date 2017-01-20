@@ -71,6 +71,12 @@ var IdeaBox = (function() {
     render(DATA);
   }
 
+  function formListener() {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+    });
+  }
+
 
   function saveListener() {
     saveBtn.addEventListener("click", function(e) {
@@ -81,6 +87,7 @@ var IdeaBox = (function() {
       }
     });
   }
+
 
   function saveAndDisplay(data) {
     saveToLocalStorage(data);
@@ -183,6 +190,7 @@ var IdeaBox = (function() {
   }
 
   function setupListeners() {
+    formListener();
     saveListener();
     searchListener();
     ideaListeners();
