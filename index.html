@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IdeaBox | Store your ideas don't remember them</title>
+
+    <!-- fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700"
+    rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo"><span>Idea</span>Box</h1>
+
+        <div class="header-form">
+          <form class="new-idea">
+            <input id="title" type="text" placeholder="Title" />
+            <textarea id="body" placeholder="Description"></textarea>
+            <input id="save" class="form-button" type="button" value="Save" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="ideas-container">
+      <div class="container">
+        <input id="search" type="text" placeholder="Search..." />
+
+        <div class="ideas"></div>
+
+      </div>
+    </section>
+    
+    <script src="js/app.js"></script>
+  </body>
+</html>
