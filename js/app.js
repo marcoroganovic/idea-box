@@ -8,6 +8,11 @@ var IdeaBox = (function() {
   var saveBtn = document.querySelector("#save");
   var search  = document.querySelector("#search");
   var ideasEl = document.querySelector(".ideas");
+  
+  var dummyData = [
+    { id: 1, title: "Example Idea #1", body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", quality: "swill" },
+    { id: 2, title: "Example Idea #2", body: "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.", quality: "swill" }
+  ];
 
   var DATA = fetchData("ideas");
 
@@ -19,7 +24,7 @@ var IdeaBox = (function() {
   }
 
   function fetchData(table) {
-    return JSON.parse(localStorage.getItem(table)) || [];
+    return JSON.parse(localStorage.getItem(table)) || dummyData;
   }
 
   function renderItem(state) {
